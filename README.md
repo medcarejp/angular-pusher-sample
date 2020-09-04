@@ -45,6 +45,7 @@ node@コンテナID:/myapp$ ng serve --host 0.0.0.0
 ```
 
 以下のURLにアクセスしてStartGuideが表示されればOK
+
 http://localhost:4200/
 
 あとはコンテナ内で ```ng g component``` コマンド等を使って開発を進められますし、
