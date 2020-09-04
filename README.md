@@ -22,25 +22,21 @@ Dockerを使いますので、
 
 ```
 $ git clone https://github.com/medcarejp/angular-pusher-sample.git
-```
 
-```
 $ cd angular-pusher-sample
-```
 
-```
 $ docker-compose build
-```
 
-```
 $ docker-compose up
-```
 
-```
 $ docker-compose exec --user=node node bash
 ```
 
+以下からコンテナ内でのコマンド実行になります。
+
 ```
+node@コンテナID:/myapp$ npm install
+
 node@コンテナID:/myapp$ ng serve --host 0.0.0.0
 ```
 
