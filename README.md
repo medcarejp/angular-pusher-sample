@@ -29,6 +29,8 @@ $ docker-compose build
 
 $ docker-compose up
 
+別のターミナルを開いて、ディレクトリをangular-pusher-sampleに移動して以下を実行
+
 $ docker-compose exec --user=node node bash
 ```
 

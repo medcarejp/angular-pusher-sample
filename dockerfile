@@ -1,7 +1,8 @@
 FROM node:12.18
 ENV LANG C.UTF-8
 
-RUN npm install -g @angular/cli && ng config -g cli.packageManager yarn  
+RUN npm install -g @angular/cli && ng config -g cli.packageManager yarn
+
 RUN apt-get update -qq && apt-get install -y vim
 
 RUN mkdir /myapp
