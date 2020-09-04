@@ -1,6 +1,7 @@
 # AngularPusherSample
 
 バックエンドをRails6(APIモード)・フロントエンドをAngular10で作った、
+
 Pusherでリアルタイム通信を行うサンプルアプリです。
 
 ## 開発環境構築手順
@@ -8,8 +9,11 @@ Pusherでリアルタイム通信を行うサンプルアプリです。
 ### Docker Desktopのインストール
 
 Dockerを使いますので、
+
 ・[win環境の方はDocker Desktop for windows](https://docs.docker.jp/docker-for-windows/install.html)
+
 ・[Macの方はDocker Desktop for Mac](https://docs.docker.jp/docker-for-mac/install.html)
+
 をお手持ちの環境にインストールしてください。
 
 本ReadMeではMacユーザーを前提にお話させていただきます。
@@ -49,4 +53,6 @@ http://localhost:4200/
 ローカル環境のターミナル $ docker-compose run node ng g component sample
 ```
 
-のようにローカルからコンポーネント生成もできます。ホットリロードも効きますので、コンテナの立ち上げ直しは必要ありません。
+のようにローカルからコンポーネント生成もできます。
+
+ホットリロードも効きますので、コンテナの立ち上げ直しは必要ありません。
