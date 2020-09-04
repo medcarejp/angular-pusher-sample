@@ -1,27 +1,52 @@
 # AngularPusherSample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
+バックエンドをRails6(APIモード)・フロントエンドをAngular10で作った、
+Pusherでリアルタイム通信を行うサンプルアプリです。
 
-## Development server
+## 開発環境構築手順
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Docker Desktopのインストール
 
-## Code scaffolding
+Dockerを使いますので、
+・[win環境の方はDocker Desktop for windows](https://docs.docker.jp/docker-for-windows/install.html)
+・[Macの方はDocker Desktop for Mac](https://docs.docker.jp/docker-for-mac/install.html)
+をお手持ちの環境にインストールしてください。
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+本ReadMeではMacユーザーを前提にお話させていただきます。
 
-## Build
+### git clone ~ Dockerコンテナ立ち上げまで
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+$ git clone https://github.com/medcarejp/angular-pusher-sample.git
+```
 
-## Running unit tests
+```
+$ cd angular-pusher-sample
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+$ docker-compose build
+```
 
-## Running end-to-end tests
+```
+$ docker-compose up
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+$ docker-compose exec --user=node node bash
+```
 
-## Further help
+```
+node@コンテナID:/myapp$ ng serve --host 0.0.0.0
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+以下のURLにアクセスしてStartGuideが表示されればOK
+http://localhost:4200/
+
+あとはコンテナ内で ```ng g component``` コマンド等を使って開発を進められますし、
+
+```
+ローカル環境のターミナル $ docker-compose run node ng g component sample
+```
+
+のようにローカルからコンポーネント生成もできます。ホットリロードも効きますので、コンテナの立ち上げ直しは必要ありません。
